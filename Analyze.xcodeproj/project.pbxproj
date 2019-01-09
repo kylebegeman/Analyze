@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		E6F40D4A21E6B07E00C2E404 /* Analyze.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F40D4821E6B07E00C2E404 /* Analyze.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6F40D5421E6B0B000C2E404 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F40D5121E6B0AF00C2E404 /* AnalyticsService.swift */; };
+		E6F40D5521E6B0B000C2E404 /* AnalyticsServicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F40D5221E6B0B000C2E404 /* AnalyticsServicable.swift */; };
+		E6F40D5621E6B0B000C2E404 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F40D5321E6B0B000C2E404 /* AnalyticsEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E6F40D4521E6B07E00C2E404 /* Analyze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Analyze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F40D4821E6B07E00C2E404 /* Analyze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Analyze.h; sourceTree = "<group>"; };
 		E6F40D4921E6B07E00C2E404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6F40D5121E6B0AF00C2E404 /* AnalyticsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		E6F40D5221E6B0B000C2E404 /* AnalyticsServicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsServicable.swift; sourceTree = "<group>"; };
+		E6F40D5321E6B0B000C2E404 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +54,19 @@
 			children = (
 				E6F40D4821E6B07E00C2E404 /* Analyze.h */,
 				E6F40D4921E6B07E00C2E404 /* Info.plist */,
+				E6F40D5021E6B08900C2E404 /* Source */,
 			);
 			path = Analyze;
+			sourceTree = "<group>";
+		};
+		E6F40D5021E6B08900C2E404 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E6F40D5321E6B0B000C2E404 /* AnalyticsEvent.swift */,
+				E6F40D5221E6B0B000C2E404 /* AnalyticsServicable.swift */,
+				E6F40D5121E6B0AF00C2E404 /* AnalyticsService.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +112,7 @@
 				TargetAttributes = {
 					E6F40D4421E6B07E00C2E404 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F40D5621E6B0B000C2E404 /* AnalyticsEvent.swift in Sources */,
+				E6F40D5521E6B0B000C2E404 /* AnalyticsServicable.swift in Sources */,
+				E6F40D5421E6B0B000C2E404 /* AnalyticsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +282,7 @@
 		E6F40D4E21E6B07E00C2E404 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.begeman.kyle.Analyze;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +309,7 @@
 		E6F40D4F21E6B07E00C2E404 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
