@@ -14,7 +14,7 @@ public protocol AnalyticsServicable {
     /// - Parameters:
     ///   - application: UIApplication instance
     ///   - launchOptions: launch options passed into the app delegate
-    func initialize(application: UIApplication, launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
+    func initialize(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
 
     /// Log the provided event using the underlying framework.
     ///
